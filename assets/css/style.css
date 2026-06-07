@@ -1,0 +1,505 @@
+/* ==========================================
+   RESET
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: #444;
+    background: #f8f7f4;
+    line-height: 1.7;
+}
+
+/* ==========================================
+   LAYOUT
+========================================== */
+
+.container {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+.section-header {
+    margin-bottom: 2rem;
+}
+
+.section-label {
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    color: #2d8c9f;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.section-header h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 3rem;
+    color: #0d2746;
+    font-weight: 600;
+}
+
+.lead-text {
+    max-width: 800px;
+    font-size: 1.15rem;
+    margin-bottom: 3rem;
+}
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.navbar {
+    background: #f8f7f4;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-content {
+    height: 80px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    /* flex: 1; */
+}
+
+.brand img {
+    width: 40px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+.brand-subtitle {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 2px;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links {
+    margin-left: auto;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #0d2746;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #2d8c9f;
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 4rem 0 5rem;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+}
+
+.hero-text {
+    max-width: 720px;
+}
+
+.hero-illustration {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 100%;
+
+    background-image: url("../images/isi_campus_illustration.png");
+    background-repeat: no-repeat;
+    background-position: 70% bottom;
+    background-size: 80% auto;
+    mask-image: linear-gradient(
+        to bottom,
+        rgba(0,0,0,1) 0%,
+        rgba(0,0,0,0.4) 75%,
+        rgba(0,0,0,0) 100%
+    );
+
+    opacity: 0.1;
+
+    pointer-events: none;
+}
+
+
+.hero-grid {
+    display: flex;
+    /* grid-template-columns: 1.1fr 1fr; */
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-grid {
+    max-width: 760px;
+}
+
+.eyebrow {
+    color: #2d8c9f;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+
+}
+
+.hero h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 4.5rem;
+    line-height: 0.95;
+    color: #0d2746;
+    margin-bottom: 1.2rem;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons, .contact-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.btn-primary,
+.btn-secondary {
+    width: auto;
+    min-width: 220px;
+}
+
+
+.btn-primary,
+.btn-secondary {
+    text-decoration: none;
+    padding: 0.9rem 1.5rem;
+    border-radius: 4px;
+    transition: 0.2s;
+    min-width: 180px;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-primary {
+    background: #0d2746;
+    color: white;
+    opacity: 1;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+.btn-secondary {
+    border: 1px solid #0d2746;
+    color: #0d2746;
+}
+
+.hero-image img {
+    width: 100%;
+    display: block;
+}
+
+.hero-metrics {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 2rem;
+    margin: 1rem;
+}
+
+.metric {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    flex-direction: column;
+    border-right: 1px solid #d7d7d7;
+
+}
+
+.metric:last-child {
+    border-right: none;
+}
+
+.metric-value {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #2d8c9f;
+    line-height: 1;
+    padding-right: 2rem;
+}
+
+.metric-label {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 0.35rem;
+}
+
+/* ==========================================
+   PILLARS
+========================================== */
+
+.pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.pillar-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid #e5e5e5;
+}
+
+.muted-number {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ddd;
+    margin-bottom: 1rem;
+}
+
+.pillar-card h3 {
+    color: #0d2746;
+    margin-bottom: 0.75rem;
+}
+
+.pillar-card p {
+    color: #666;
+}
+
+/* ==========================================
+   STATS
+========================================== */
+
+.stats {
+    background: white;
+    padding: 5rem 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.stat-card {
+    text-align: center;
+}
+
+.stat-card h3 {
+    font-family: "Cormorant Garamond", serif;
+    color: #0d2746;
+    font-size: 4rem;
+}
+
+.stat-card p {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #666;
+}
+
+/* ==========================================
+   PROGRAMMES
+========================================== */
+
+.programme-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.programme-card {
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.programme-card h3 {
+    color: #0d2746;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.programme-card p {
+    color: #666;
+}
+
+/* ==========================================
+   LOGOS
+========================================== */
+
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.logo-box {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    min-height: 120px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 600;
+    color: #0d2746;
+}
+
+/* ==========================================
+   CONTACT
+========================================== */
+
+.contact-section {
+    background: white;
+}
+
+.contact-buttons {
+    max-width: 800px;
+    margin-bottom: 1rem;
+}
+
+.contact-card {
+    max-width: 800px;
+
+    background: #f8f7f4;
+
+    border: 1px solid #ddd;
+
+    padding: 2rem;
+
+    border-radius: 10px;
+}
+
+.contact-card p {
+    margin-bottom: 1rem;
+}
+
+.contact-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 900px) {
+
+    body {
+        font-size: 17px;
+    }
+
+    .hero-description,
+    .lead-text,
+    .pillar-card p,
+    .programme-card p,
+    .contact-card p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+
+    .hero-grid,
+    .pillars,
+    .stats-grid,
+    .programme-grid,
+    .logo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 1rem 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        line-height: 0.95;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons, .contact-buttons {
+        gap: 0.75rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .section-header h2 {
+        font-size: 2.25rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero-description {
+        max-width: 24ch;
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+}
