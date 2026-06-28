@@ -161,6 +161,7 @@ body {
     min-width: 180px;
     text-align: center;
     display: inline-block;
+    flex: 1;
 }
 
 .btn-primary {
